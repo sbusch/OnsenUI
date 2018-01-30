@@ -53,7 +53,20 @@ ToolbarButton.propTypes = {
    *  [/en]
    *  [ja][/ja]
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+
+  /**
+   * @name icon
+   * @type 'object or string'
+   * @required false
+   * @description
+   *  [en] Optional icon specification. See "icon" property for <Icon> component[/en]
+   *  [ja][/ja]
+   */
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.objectOf(PropTypes.string)
+  ])
 };
 
 export default ToolbarButton;
